@@ -5,11 +5,11 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-@Mapper (componentModel = "spring")
+@Mapper
 public interface UsuarioMapper {
     UsuarioMapper INSTANCE = Mappers.getMapper(UsuarioMapper.class);
     UsuarioDto usuarioToUsuarioDto (Usuario usuario);
     Usuario usuarioDtoToUsuario (UsuarioDto usuarioDto);
     @Mapping(target = "id", ignore = true)
-    Usuario usuarioToSaveDto (UsuarioToSaveDto usuarioToSaveDto);a
+    Usuario usuarioToSaveDto (UsuarioToSaveDto usuarioToSaveDto);
 }
